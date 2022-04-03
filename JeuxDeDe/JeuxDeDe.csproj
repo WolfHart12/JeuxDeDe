@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,11 +49,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Component\AfficherCarteBonus.cs">
+    <Compile Include="Component\AfficherCarteMagique.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Component\AfficherCarteBonus.Designer.cs">
-      <DependentUpon>AfficherCarteBonus.cs</DependentUpon>
+    <Compile Include="Component\AfficherCarteMagique.Designer.cs">
+      <DependentUpon>AfficherCarteMagique.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\AppliquerCarteMagique.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Component\AppliquerCarteMagique.Designer.cs">
+      <DependentUpon>AppliquerCarteMagique.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\PanelCenter.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="FormJeuxDeDe.cs">
       <SubType>Form</SubType>
@@ -59,11 +71,15 @@
       <DependentUpon>FormJeuxDeDe.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\CarteBonus.cs" />
+    <Compile Include="Models\ConfigModel.cs" />
     <Compile Include="Models\Participant.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Component\AfficherCarteBonus.resx">
-      <DependentUpon>AfficherCarteBonus.cs</DependentUpon>
+    <EmbeddedResource Include="Component\AfficherCarteMagique.resx">
+      <DependentUpon>AfficherCarteMagique.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\AppliquerCarteMagique.resx">
+      <DependentUpon>AppliquerCarteMagique.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormJeuxDeDe.resx">
       <DependentUpon>FormJeuxDeDe.cs</DependentUpon>
@@ -77,6 +93,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -86,70 +103,106 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\config\config_cartes.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Ressources\carte et jeux\Carte BOUM.PNG">
+    <Content Include="Resources\audio\Applaudissements.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Ressources\carte et jeux\Carte BOUTEILLE.PNG">
+    <Content Include="Resources\audio\Carte CANON.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Ressources\carte et jeux\Carte CADEAU.PNG">
+    <Content Include="Resources\audio\oui.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Ressources\carte et jeux\Carte CANON.PNG">
+    <Content Include="Resources\audio\non.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Ressources\carte et jeux\Carte FUSEE.PNG">
+    <Content Include="Resources\carte et jeux\Carte BOUM.PNG">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Ressources\carte et jeux\Carte LASSO.PNG">
+    <Content Include="Resources\carte et jeux\Carte BOUTEILLE.PNG">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Ressources\carte et jeux\Carte PILE.PNG">
+    <Content Include="Resources\carte et jeux\Carte CADEAU.PNG">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Ressources\carte plateau\1.Carte voiture.PNG">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Ressources\carte plateau\2.Carte velo.PNG">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Ressources\carte plateau\3.Carte tracteur.PNG">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Ressources\carte plateau\4.Carte skate.PNG">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Ressources\carte plateau\5.Carte scooter.JPG">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Ressources\carte plateau\test.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Ressources\cartes Participants\5.Carte scooter.JPG">
+    <Content Include="Resources\carte et jeux\Carte CANON.PNG">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Ressources\cartes Participants\4.Carte skate.PNG">
+    <Content Include="Resources\carte et jeux\Carte FUSEE.PNG">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Ressources\cartes Participants\3.Carte tracteur.PNG">
+    <Content Include="Resources\carte et jeux\Carte LASSO.PNG">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Ressources\cartes Participants\2.Carte velo.PNG">
+    <Content Include="Resources\carte et jeux\Carte PILE.PNG">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Ressources\cartes Participants\1.Carte voiture.PNG">
+    <Content Include="Resources\cartes Participants\6.carte Roulette.PNG">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Ressources\plateau\JEU FINAL.jpg" />
-    <Content Include="Ressources\plateau\PLAN DU JEU FINAL.jpg" />
-    <Content Include="Ressources\plateau\Plateau final V2.jpg" />
-    <Content Include="Ressources\plateau\Plateau.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <Content Include="Resources\cartes Participants\5.Carte scooter.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartes Participants\4.Carte skate.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartes Participants\7.Carte Soucoupe.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartes Participants\3.Carte tracteur.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartes Participants\8.Carte trotinette.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartes Participants\2.Carte velo.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartes Participants\1.Carte voiture.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartes personnages\1.Carte voiture.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartes personnages\2.Carte velo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartes personnages\3.Carte tracteur.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartes personnages\4.Carte skate.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartes personnages\5.Carte scooter.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartes personnages\6.carte Roulette.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartes personnages\7.Carte Soucoupe.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartes personnages\8.Carte trotinette.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\plateau\JEU FINAL.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\plateau\PLAN DU JEU FINAL.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\plateau\Plateau final V2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\plateau\Plateau.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>

@@ -1,7 +1,7 @@
 ﻿
 namespace JeuxDeDe.Component
 {
-    partial class AfficherCarteBonus
+    partial class AfficherCarteMagique
     {
         /// <summary>
         /// Required designer variable.

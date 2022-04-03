@@ -1,0 +1,106 @@
+{
+  "CartesParticipants": [ "1.Carte voiture.png", "2.Carte velo.png", "3.Carte tracteur.png", "4.Carte skate.png", "5.Carte scooter.png", "6.carte Roulette.png", "7.Carte Soucoupe.png", "8.Carte trotinette.png" ],
+  "CartesPersonnages": [ "1.Carte voiture.png", "2.Carte velo.png", "3.Carte tracteur.png", "4.Carte skate.png", "5.Carte scooter.png", "6.carte Roulette.png", "7.Carte Soucoupe.png", "8.Carte trotinette.png" ],
+  "CartesJeux": [ "Carte BOUM.PNG", "Carte BOUTEILLE.PNG", "Carte CADEAU.PNG", "Carte CANON.PNG", "Carte FUSEE.PNG", "Carte LASSO.PNG", "Carte PILE.PNG" ],
+
+  "PositionInitialCartes": [
+    {
+      "X": 550,
+      "Y": 500
+    },
+    {
+      "X": 500,
+      "Y": 530
+    },
+    {
+      "X": 580,
+      "Y": 545
+    },
+    {
+      "X": 523,
+      "Y": 570
+    },
+    {
+      "X": 604,
+      "Y": 586
+    },
+    {
+      "X": 553,
+      "Y": 616
+    },
+    {
+      "X": 640,
+      "Y": 625
+    },
+    {
+      "X": 585,
+      "Y": 664
+    }
+  ],
+
+  "CartesMagiques": [
+    {
+      "idCarte": 1,
+      "NomCarte": "Carte BOUM",
+      "PathCarte": "Resources/carte et jeux/Carte BOUM.PNG",
+      "CarteTyp": "MALUS",
+      "CondtionCarte": "TOUTES LES EQUIPES RECULENT D'UNE CASE",
+      "AudioOui": "Resources/audio/oui.wav",
+      "AudioNon": "Resources/audio/non.wav"
+    },
+    {
+      "idCarte": 2,
+      "NomCarte": "Carte BOUTEILLE",
+      "PathCarte": "Resources/carte et jeux/Carte BOUTEILLE.PNG",
+      "CarteTyp": "MALUS",
+      "CondtionCarte": "L'EQUIPE JUSTE DERRIERE RECULE D'UNE CASE",
+      "AudioOui": "Resources/audio/oui.wav",
+      "AudioNon": "Resources/audio/non.wav"
+    },
+    {
+      "idCarte": 3,
+      "NomCarte": "Carte CADEAU",
+      "PathCarte": "Resources/carte et jeux/Carte CADEAU.PNG",
+      "CarteTyp": "BONUS",
+      "CondtionCarte": "CHOISIR UNE EQUIPE QUI AVANCERA D'UNE CASE",
+      "AudioOui": "Resources/audio/oui.wav",
+      "AudioNon": "Resources/audio/non.wav"
+    },
+    {
+      "idCarte": 4,
+      "NomCarte": "Carte CANON",
+      "PathCarte": "Resources/carte et jeux/Carte CANON.PNG",
+      "CarteTyp": "MALUS",
+      "CondtionCarte": "LE LEADER RECULE D'UNE CASE",
+      "AudioOui": "Resources/audio/Carte CANON.wav",
+      "AudioNon": "Resources/audio/non.wav"
+    },
+    {
+      "idCarte": 5,
+      "NomCarte": "Carte FUSEE",
+      "PathCarte": "Resources/carte et jeux/Carte FUSEE.PNG",
+      "CarteTyp": "BONUS",
+      "CondtionCarte": "L'EQUIPE AVANCE DE DEUX CASES",
+      "AudioOui": "Resources/audio/oui.wav",
+      "AudioNon": "Resources/audio/non.wav"
+    },
+    {
+      "idCarte": 6,
+      "NomCarte": "Carte LASSO",
+      "PathCarte": "Resources/carte et jeux/Carte LASSO.PNG",
+      "CarteTyp": "MALUS",
+      "CondtionCarte": "L'EQUIPE JUSTE DEVANT RECULE D'UNE CASE",
+      "AudioOui": "Resources/audio/oui.wav",
+      "AudioNon": "Resources/audio/non.wav"
+    },
+    {
+      "idCarte": 7,
+      "NomCarte": "Carte PILE",
+      "PathCarte": "Resources/carte et jeux/Carte PILE.PNG",
+      "CarteTyp": "BONUS",
+      "CondtionCarte": "L'EQUIPE AVANCE D'UNE CASE",
+      "AudioOui": "Resources/audio/oui.wav",
+      "AudioNon": "Resources/audio/non.wav"
+    }
+  ]
+}
