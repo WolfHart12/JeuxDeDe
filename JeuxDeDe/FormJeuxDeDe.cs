@@ -104,8 +104,8 @@ namespace JeuxDeDe
                     p++;
                     continue;
                 }
-                int posX = participant.posX*this.panelCenter.Width/this.maxPCW;
-                int posY = participant.posY * this.panelCenter.Height / this.maxPCH;
+                int posX = participant.posX;// * this.panelCenter.Width/this.maxPCW;
+                int posY = participant.posY;// * this.panelCenter.Height / this.maxPCH;
                 Rectangle rectPersonnage = new Rectangle(posX, posY, this.tailImagePersonnagePlateau, this.tailImagePersonnagePlateau);
                 e.Graphics.DrawEllipse(pen, rectPersonnage);
             
@@ -138,8 +138,12 @@ namespace JeuxDeDe
                 partic.NomCarte = this.listCartesParticipants.ElementAt(i);
                 partic.nomCartePlateau = this.listCartesPersonnages.ElementAt(i);
                 partic.bitmapCartePlateau = new Bitmap(@Path.Combine(pathExec, partic.nomCartePlateau));
-                partic.posX = this.configCartes.PositionInitialCartes.ElementAt(i).X;
-                partic.posY = this.configCartes.PositionInitialCartes.ElementAt(i).Y;
+                //partic.posX = this.configCartes.PositionInitialCartes.ElementAt(i).X;
+                //partic.posY = this.configCartes.PositionInitialCartes.ElementAt(i).Y;
+
+                partic.posX = this.panelCenter.Width * this.configCartes.PositionInitialCartes.ElementAt(i).X / 100;
+                partic.posY = this.panelCenter.Height * this.configCartes.PositionInitialCartes.ElementAt(i).Y / 100;
+
                 this.listParticipant.Add(partic);
             }
 

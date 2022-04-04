@@ -136,89 +136,81 @@ namespace JeuxDeDe
             // 
             this.labelHP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelHP.AutoSize = true;
-            this.labelHP.Location = new System.Drawing.Point(276, 38);
+            this.labelHP.Location = new System.Drawing.Point(190, 33);
             this.labelHP.Name = "labelHP";
             this.labelHP.Size = new System.Drawing.Size(13, 13);
             this.labelHP.TabIndex = 22;
             this.labelHP.Text = "0";
-            this.labelHP.Visible = false;
             // 
             // labelWP
             // 
             this.labelWP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelWP.AutoSize = true;
-            this.labelWP.Location = new System.Drawing.Point(276, 22);
+            this.labelWP.Location = new System.Drawing.Point(190, 17);
             this.labelWP.Name = "labelWP";
             this.labelWP.Size = new System.Drawing.Size(13, 13);
             this.labelWP.TabIndex = 21;
             this.labelWP.Text = "0";
-            this.labelWP.Visible = false;
             // 
             // label6
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(249, 38);
+            this.label6.Location = new System.Drawing.Point(163, 33);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(25, 13);
             this.label6.TabIndex = 20;
             this.label6.Text = "HP:";
-            this.label6.Visible = false;
             // 
             // label7
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(249, 22);
+            this.label7.Location = new System.Drawing.Point(163, 17);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(28, 13);
             this.label7.TabIndex = 19;
             this.label7.Text = "WP:";
-            this.label7.Visible = false;
             // 
             // labelMouseY
             // 
             this.labelMouseY.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelMouseY.AutoSize = true;
-            this.labelMouseY.Location = new System.Drawing.Point(219, 38);
+            this.labelMouseY.Location = new System.Drawing.Point(133, 33);
             this.labelMouseY.Name = "labelMouseY";
             this.labelMouseY.Size = new System.Drawing.Size(13, 13);
             this.labelMouseY.TabIndex = 18;
             this.labelMouseY.Text = "0";
-            this.labelMouseY.Visible = false;
             // 
             // labelMouseX
             // 
             this.labelMouseX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelMouseX.AutoSize = true;
-            this.labelMouseX.Location = new System.Drawing.Point(219, 22);
+            this.labelMouseX.Location = new System.Drawing.Point(133, 17);
             this.labelMouseX.Name = "labelMouseX";
             this.labelMouseX.Size = new System.Drawing.Size(13, 13);
             this.labelMouseX.TabIndex = 17;
             this.labelMouseX.Text = "0";
-            this.labelMouseX.Visible = false;
             // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(196, 38);
+            this.label3.Location = new System.Drawing.Point(110, 33);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(17, 13);
             this.label3.TabIndex = 16;
             this.label3.Text = "Y:";
-            this.label3.Visible = false;
             // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(196, 22);
+            this.label2.Location = new System.Drawing.Point(110, 17);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(17, 13);
             this.label2.TabIndex = 15;
             this.label2.Text = "X:";
-            this.label2.Visible = false;
             // 
             // buttonChoixCarteBonus
             // 
